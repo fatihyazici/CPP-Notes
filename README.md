@@ -1,2 +1,10 @@
 # CPP-Notes
-my c++ notes
+My C++ Notes
+
+### SUBJECTS ####
+
+* const semantics
+* initializing
+* references and value expressions
+* references and const semantics
+

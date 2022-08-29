@@ -1,7 +1,7 @@
 /*
 That note is written on CSPD-CPP-Lesson2 & Lesson3
 
-Subjects : References
+Subjects : References and Value Expressions
 
 Author  : Fatih Y.
 
@@ -10,6 +10,14 @@ Author  : Fatih Y.
 #include <iostream>
 
 using namespace std;
+
+//example swap function - call by reference
+void ex_swap(int &x1, int &x2)
+{
+    int temp = x1;
+    x1 = x2;
+    x2 = temp;
+}
 
 int main()
 {
@@ -21,7 +29,7 @@ int main()
 
     ++r; //is equal to '++x'
 
-    cout << "x : " << x << "\n"; //prints " x : 11 "
+    cout << "x = " << x << "\n"; //prints " x = 11 "
 
 
     //--- EXAMPLE2
@@ -31,7 +39,7 @@ int main()
     int &r2 { *ptr2 };
 
     r2 = 35;
-    cout << "x2: " << x2 << '\n'; //prints > x2: 35
+    cout << "x2 = " << x2 << '\n'; //prints > x2 = 35
 
 
     //--- EXAMPLE3
@@ -45,7 +53,7 @@ int main()
 
     ++ *p3;
 
-    cout << "y3 = " << y3 << "\n"; //prints > y3:14
+    cout << "y3 = " << y3 << "\n"; //prints > y3 = 14
 
 
     //--- EXAMPLE4
@@ -61,11 +69,23 @@ int main()
 
     cout << "x4 = " << x4 << "\n"; // prints > x4 = 13
 
+
+    //--- EXAMPLE5 - SWAP Function example with references
+    
+    int sw_a = 5;
+    int sw_b = 15;
+    
+    cout << "Before SWAP sw_a = " << sw_a << " , sw_b = "<< sw_b <<"\n"; // 
+    ex_swap(sw_a, sw_b);
+    cout << "After  SWAP sw_a = " << sw_a << " , sw_b = "<< sw_b <<"\n"; //
+
+
 }
 
 
 
 /*
+#### REFERENCES and VALUE EXPRESSIONS ####
 
 NOTE1:
     * L-Val Reference : is replaced name of an object
@@ -126,5 +146,36 @@ NOTE6: it returns l-value expr
 
 -----------------------------------------------------------------------------
 
+NOTE7: references types and object types must be same. Otherwise, syntax error!
+
+    int main()
+    {
+        char c{};
+        int &r = c; //syntax error
+
+    }
+
+-----------------------------------------------------------------------------
+
+NOTE8: References as a function return value
+    
+    int g{ 24 };
+    
+    int& func()
+    {
+        ///
+        return g;
+    }
+
+
+    int main()
+    {
+        func() = 20; //LEGAL, func() is L value expr
+    
+        int&r = func(); //LEGAL
+    }
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 */
