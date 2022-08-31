@@ -7,4 +7,6 @@ My C++ Notes
 * initializing
 * references and value expressions
 * references and const semantics
+* references and pointers
+
 

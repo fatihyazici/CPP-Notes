@@ -54,5 +54,50 @@ NOTE2: Low Level and Top Level Consts
 
 -----------------------------------------------------------------------------
 
+NOTE3: Const type convertion  (T for type)
+
+        T x ===> const T x; // LEGAL
+        const T x ===> T x; // ILLEGAL
+
+
+        int& foo()
+        {
+            const static int x = 10;
+        
+            return x; // ILLEGAL, SYNTAX ERROR
+        }
+
+        const int& foo()
+        {
+            static int x = 10;
+        
+            return x; // LEGAL, type convertion
+        }
+
+-----------------------------------------------------------------------------
+
+NOTE4: We can not bind R-Value expr to L-value reference but we CAN bind R-Value expr to 'const' L-value reference. 
+
+    int x = 10;
+
+    int&r = x+5; //ILLEGAL
+    const int&r = x+5; //LEGAL
+
+    ---
+
+    int foo();
+    int& func();
+
+    int main()
+    {
+        int& a = func(); //LEGAL
+        int& b = foo(); //ILLEGAL
+        const int& c = foo(); //LEGAL
+
+    }
+
+-----------------------------------------------------------------------------
+
+
 
 */
