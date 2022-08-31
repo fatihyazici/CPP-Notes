@@ -30,6 +30,8 @@ int main()
 
     foo() = 5; //warning: reference to local variable 'x' returned [-Wreturn-local-addr]
 
+    const int& ref1 = 13;
+    
 
 }
 
@@ -98,6 +100,31 @@ NOTE4: We can not bind R-Value expr to L-value reference but we CAN bind R-Value
 
 -----------------------------------------------------------------------------
 
+NOTE5: You can use const refs with R value, like this ===>  const int& ref1 = 13;
 
+    void func(const int&)
+    {
 
+    }
+
+    int main()
+    {
+        func(13);
+    }
+
+-----------------------------------------------------------------------------
+
+NOTE6: why we are using 'uniform init'?
+        1- Uniform. You can use anywhere
+        2- Narrowing Convertion is Syntax Error
+        3- most vexing parse [Read 'INFOS' for information]
+
+-----------------------------------------------------------------------------
+
+NOTE7: 
+    T &r  = expr; //L-Val Expr
+    T &&r = expr; //R-Val Expr
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 */
