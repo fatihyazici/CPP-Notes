@@ -1,11 +1,8 @@
-/*
-That note is written on CSPD-CPP-Lesson2 & Lesson3
+## NOTES
 
-Subjects : References and Value Expressions
+**0)** Examples. //TODO: move to Codes/Examples
 
-Author  : Fatih Y.
-
-*/
+```c++
 
 #include <iostream>
 
@@ -82,99 +79,117 @@ int main()
 
 }
 
+```
 
 
-/*
-#### REFERENCES and VALUE EXPRESSIONS ####
+---
 
-NOTE1:
-    * L-Val Reference : is replaced name of an object
-    * R-Val Reference (with Modern C++)
-        - Move Semantics
-        - Perfect Forwarding
+**1)**
 
------------------------------------------------------------------------------
+* L-Val Reference : is replaced name of an object    
+* R-Val Reference (with Modern C++)
+    - Move Semantics
+    - Perfect Forwarding
 
-NOTE2: References and Pointers actually are not different.
+---
 
------------------------------------------------------------------------------
+**2)** References and Pointers actually are not different.
 
-NOTE3: References can not init default. (Pointers can <null ptr>)
-        int *ptr; //LEGAL
-        int &ref; //ILLEGAL
+---
 
------------------------------------------------------------------------------
+**3)** References can not init default. (Pointers can <null ptr>)
 
-NOTE4: call-by-reference
-
-    void func(int& r)
-    {
-        ++r; //It changes "x" value because of reference
-    }
-
-    int main()
-    {
-        int x = 5;
-
-        func(x);
-    }
-
------------------------------------------------------------------------------
-
-NOTE5: why we are using references instead of pointers?
-        - operator overloading
-        - useability
-        
------------------------------------------------------------------------------
-
-NOTE6: it returns l-value expr
-
-    int g{24};
-
-    int& func()
-    {
-        return g;
-    }
-
-    int main()
-    {
-        func() = 25;
-        ++func();
-
-        int& r = func();
-    }
-
------------------------------------------------------------------------------
-
-NOTE7: references types and object types must be same. Otherwise, syntax error!
-
-    int main()
-    {
-        char c{};
-        int &r = c; //syntax error
-
-    }
-
------------------------------------------------------------------------------
-
-NOTE8: References as a function return value
+```c++
     
-    int g{ 24 };
+int *ptr; //LEGAL
+int &ref; //ILLEGAL
+
+```
+---
     
-    int& func()
-    {
-        ///
-        return g;
-    }
+**4)** call-by-reference
 
+```c++
 
-    int main()
-    {
-        func() = 20; //LEGAL, func() is L value expr
+void func(int& r)
+{
+    ++r; //It changes "x" value because of reference
+}
+
+int main()
+{
+    int x = 5;
+
+    func(x);
+}
+
+```
+
+---
     
-        int&r = func(); //LEGAL
-    }
+**5)** why we are using references instead of pointers?
 
------------------------------------------------------------------------------
------------------------------------------------------------------------------
-*/
+* operator overloading
+* useability
+
+---
+    
+**6)** it returns l-value expr
+
+```c++
+
+int g{24};
+
+int& func()
+{
+    return g;
+}
+
+int main()
+{
+    func() = 25;
+    ++func();
+
+    int& r = func();
+}
+
+```
+
+---
+    
+**7)** references types and object types must be same. Otherwise, syntax error!
+
+```c++
+
+int main()
+{
+    char c{};
+    int &r = c; //syntax error
+
+}
+
+```
+
+---
+    
+**8)** References as a function return value
+
+```c++
+
+int g{ 24 };
+
+int& func()
+{
+    ///
+    return g;
+}
+
+
+int main()
+{
+    func() = 20; //LEGAL, func() is L value expr
+
+    int&r = func(); //LEGAL
+}
+
+```
