@@ -1,11 +1,11 @@
 ## NOTES
 
-* 'auto' type deduction (this auto different from C)
+**1)** 'auto' type deduction (this auto different from C)
     - It uses for static data type deduction.
 
 ---
 
-* auto type variables can not default init.
+**2)** auto type variables can not default init.
 
 ```c++
 
@@ -18,9 +18,11 @@ auto x = dval; //LEGAL, x's type is double
 
 ---
 
-* AAA: Almost Always Auto . Always use auto when you declare variable
+**3)** AAA: Almost Always Auto . Always use auto when you declare variable
 
 ---
+
+**4)** 
 
 ```c++
 
@@ -37,6 +39,8 @@ auto& x = expr;
 
 ---
 
+**5)**
+
 ```c++
 
 int a[3] = {1, 2, 3};
@@ -46,7 +50,7 @@ auto b = a; //b's type is int* (int *b = a)
 
 ---
 
-* To see type of data, use this and see compiler message for syntax error
+**6)** To see type of data, use this and see compiler message for syntax error
 
 
 ```c++
