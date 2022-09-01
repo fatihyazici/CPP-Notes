@@ -6,6 +6,7 @@ ___Subjects__ : Consts_
 ___Author__  : Fatih Y._
 
 
+-----
 ````c++
 #include <iostream>
 
@@ -17,4 +18,6 @@ int main()
     //char * name2 = "fatih"; //it is illegal
 }
 ````
+    
+-----
 
