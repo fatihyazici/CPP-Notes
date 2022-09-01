@@ -1,11 +1,14 @@
-/*
-That note is written on CSPD-CPP-Lesson2
 
-Subjects : Initializers, Value Categories
+_That note is written on CSPD-CPP-Lesson2_
 
-Author  : Fatih Y.
+___Subjects__ : Initializers, Value Categories_
 
-*/
+___Author__  : Fatih Y._
+
+
+
+-------
+```c++
 
 #include <iostream>
 
@@ -28,33 +31,40 @@ int main()
     cout << fval << '\n';
 
 }
+```
+------
 
 
-/*
+## NOTES
 
-NOTE0: initalizes in CPP
+__NOTE0:__ initalizes in CPP
 
-T x = expr;   //copy init
-T x(expr);    //direct init
-T x{};        //value init
-T x{expr};    //direct list init
+* T x = expr;   //copy init
+* T x(expr);    //direct init
+* T x{};        //value init
+* T x{expr};    //direct list init
 
+-----------------------------------------------------------------------------
 
-NOTE1: Designated initalizers added C in C99, added CPP in CPP20
+__NOTE1:__ Designated initalizers added C in C99, added CPP in CPP20
 
 You can give init value of arrays spesific elements, other ones get 0 values 
-ex: int a[7] = {1, 0, 0, 2, 0, 8, 0};
-    int a[] = {[0]=1, [3]=2, [5]=8};
+
+ex: 
+* int a[7] = {1, 0, 0, 2, 0, 8, 0};
+* int a[] = {[0]=1, [3]=2, [5]=8};
 
 These 2 arrays are equal!
 
 -----------------------------------------------------------------------------
 
-NOTE2: in CPP, main func return value must be "int", otherwise syntax error
+__NOTE2:__ in CPP, main func return value must be "int", otherwise syntax error
 
 -----------------------------------------------------------------------------
 
-QUESTION1: Is legal or illegal? 
+_QUESTION1: Is legal or illegal?_
+
+```c++
 
 int main()
 {
@@ -64,25 +74,22 @@ int main()
 
     char* name = "fatih"; //ILLEGAL
 }
+```
+-----------------------------------------------------------------------------
+
+__NOTE3:__ every 'expression' has DATA TYPE (int, double, float, char, bool...)
 
 -----------------------------------------------------------------------------
 
-NOTE3: every 'expression' has DATA TYPE (int, double, float, char, bool...)
+__NOTE4:__ value categories in CPP
 
------------------------------------------------------------------------------
-
-NOTE4: value categories in CPP
-
-L value (expr) > Left Val
-PR value(expr) > Pure R Val
-X value (expr) > Expiring Val
+* L value (expr) > Left Val
+* PR value(expr) > Pure R Val
+* X value (expr) > Expiring Val
 
 
-L-Val  U X-Val = GL Value (generalize)
-PR-Val U X-Val = R  Value 
+* L-Val  U X-Val = GL Value (generalize)
+* PR-Val U X-Val = R  Value 
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------
-*/
-
-
