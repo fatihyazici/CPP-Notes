@@ -37,8 +37,8 @@ int& ref; // ILLEGAL
 
 __NOTE2:__ 
 
-    * pointer to pointer // LEGAL
-    * reference to reference // ILLEGAL
+* pointer to pointer // LEGAL
+* reference to reference // ILLEGAL
 
 ```c++
 
@@ -60,9 +60,9 @@ __NOTE3:__
 
 ```c++
 
-    int*ptr[5]; // pointer array
+int*ptr[5]; // pointer array
 
-    int& ref[5] = {a, b, c, ...}; // ILLEGAL
+int& ref[5] = {a, b, c, ...}; // ILLEGAL
 
 ```
 
@@ -74,14 +74,14 @@ __NOTE4:__ _references already TOP LEVEL CONST_, pointers can be CONST
 
 __NOTE5:__ NULL and nullptr usage in C and C++
 
-    * in C ===> ptr = NULL;
-    * in C ===> ptr = 0;
+* in C ===> ptr = NULL;
+* in C ===> ptr = 0;
 
-    * in Before Modern C++ ===> ptr = 0;
-    * in After  Modern C++ ===> ptr = nullptr;
+- in Before Modern C++ ===> ptr = 0;
+- in After  Modern C++ ===> ptr = nullptr;
 
 
-    - there is 'null pointer' but there is not 'null reference'
+* there is 'null pointer' but there is not 'null reference'
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------
