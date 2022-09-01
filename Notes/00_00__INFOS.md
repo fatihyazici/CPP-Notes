@@ -1,4 +1,4 @@
-* What is 'most vexing parse' ?
+#### What is 'most vexing parse' ?
 
 EXPLANATION: The most vexing parse is a counterintuitive form of syntactic ambiguity resolution in the C++ programming language. In certain situations, the C++ grammar cannot distinguish between the creation of an object parameter and specification of a function's type. In those situations, the compiler is required to interpret the line as a function type specification.
 
