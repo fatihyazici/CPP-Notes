@@ -1,11 +1,12 @@
-/*
-That note is written on CSPD-CPP-Lesson3
+_That note is written on CSPD-CPP-Lesson3_
 
-Subjects : Type Deduction
+___Subjects__ : Type Deduction_
 
-Author  : Fatih Y.
+___Author__  : Fatih Y._
 
-*/
+-----------
+
+```c++
 
 #include <iostream>
 
@@ -15,30 +16,37 @@ int main()
 {
 
 }
+```
+-----------
 
+## NOTES
 
-/*
-#### TYPE DEDUCTION ####
-
-NOTE1: 'auto' type deduction (this auto different from C)
+__NOTE1:__ 'auto' type deduction (this auto different from C)
     - It uses for static data type deduction.
 
 -----------------------------------------------------------------------------
 
-NOTE2: auto type variables can not default init.
+__NOTE2:__ auto type variables can not default init.
 
-    auto x; // SYNTAX ERROR
+```c++
 
-    double dval{};
-    auto x = dval; //LEGAL, x's type is double
+auto x; // SYNTAX ERROR
+
+double dval{};
+auto x = dval; //LEGAL, x's type is double
+
+```
 
 -----------------------------------------------------------------------------
 
-NOTE3: AAA: Almost Always Auto . Always use auto when you declare variable
+__NOTE3:__ AAA: Almost Always Auto . Always use auto when you declare variable
 
 -----------------------------------------------------------------------------
 
-NOTE4: 
+__NOTE4:__
+
+```c++
+
     auto x = expr;
         -> const int x = 10;    //(int x = 10)
         -> auto y = x;          //y's type is 'int' , not 'const int' (int y = x)
@@ -48,22 +56,33 @@ NOTE4:
         -> auto& r = x;         //r's type is 'int' ( int r = x)
         -> const auto& r = x;   //r's type is 'int' ( int r = x)
 
------------------------------------------------------------------------------
-
-NOTE5: 
-    int a[3] = {1, 2, 3};
-    auto b = a; //b's type is int* (int *b = a)
+```
 
 -----------------------------------------------------------------------------
 
-NOTE6: To see type of data, use this and see compiler message for syntax error
+__NOTE5:__
 
-    #include <iostream>
-    template<typename T>
-    class TypeTeller;
+```c++
 
-    TypeTeller<decltype(b)>
+int a[3] = {1, 2, 3};
+auto b = a; //b's type is int* (int *b = a)
+
+```
+
+-----------------------------------------------------------------------------
+
+__NOTE6:__ To see type of data, use this and see compiler message for syntax error
+
+
+```c++
+
+#include <iostream>
+template<typename T>
+class TypeTeller;
+
+TypeTeller<decltype(b)>
+
+```
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------
-*/
