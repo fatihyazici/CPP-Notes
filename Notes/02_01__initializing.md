@@ -1,13 +1,9 @@
 
-_That note is written on CSPD-CPP-Lesson2_
-
-___Subjects__ : Initializers, Value Categories_
-
-___Author__  : Fatih Y._
+## NOTES
 
 
+**0)** Example. //TODO: Move to Codes/Examples
 
--------
 ```c++
 
 #include <iostream>
@@ -32,21 +28,19 @@ int main()
 
 }
 ```
-------
 
+---
 
-## NOTES
-
-__NOTE0:__ initalizes in CPP
+**1)** initalizes in CPP
 
 * T x = expr;   //copy init
 * T x(expr);    //direct init
 * T x{};        //value init
 * T x{expr};    //direct list init
 
------------------------------------------------------------------------------
+---
 
-__NOTE1:__ Designated initalizers added C in C99, added CPP in CPP20
+**2)** Designated initalizers added C in C99, added CPP in CPP20
 
 You can give init value of arrays spesific elements, other ones get 0 values 
 
@@ -56,11 +50,11 @@ ex:
 
 These 2 arrays are equal!
 
------------------------------------------------------------------------------
+---
 
-__NOTE2:__ in CPP, main func return value must be "int", otherwise syntax error
+**3)** in CPP, main func return value must be "int", otherwise syntax error
 
------------------------------------------------------------------------------
+---
 
 _QUESTION1: Is legal or illegal?_
 
@@ -75,13 +69,14 @@ int main()
     char* name = "fatih"; //ILLEGAL
 }
 ```
------------------------------------------------------------------------------
 
-__NOTE3:__ every 'expression' has DATA TYPE (int, double, float, char, bool...)
+---
 
------------------------------------------------------------------------------
+**4)** every 'expression' has DATA TYPE (int, double, float, char, bool...)
 
-__NOTE4:__ value categories in CPP
+---
+
+**5)** value categories in CPP
 
 * L value (expr) > Left Val
 * PR value(expr) > Pure R Val
@@ -90,6 +85,3 @@ __NOTE4:__ value categories in CPP
 
 * L-Val  U X-Val = GL Value (generalize)
 * PR-Val U X-Val = R  Value 
-
------------------------------------------------------------------------------
------------------------------------------------------------------------------
