@@ -1,12 +1,5 @@
+---
 
-_That note is written on CSPD-CPP-Lesson2_
-
-___Subjects__ : Consts_
-
-___Author__  : Fatih Y._
-
-
------
 ````c++
 #include <iostream>
 
@@ -19,5 +12,4 @@ int main()
 }
 ````
     
------
-
+---
