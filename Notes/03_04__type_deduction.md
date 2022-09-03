@@ -64,7 +64,57 @@ int main()
     int a = 10;
     auto b = a;
     
-    TypeTeller<decltype(b)>
+    TypeTeller<decltype(b)> x;
 
 }
+```
+
+---
+
+**7)** 
+
+```c++
+
+auto x = "fatih";
+//const char* x = "fatih";
+
+auto& y = "fatih";
+//const char(&z)[6] = "fatih";
+
+```
+
+---
+
+**8)** ```auto&& x =expr;```
+
+* If first init value is PR value, this auto type is directly first init type's data type.
+
+```c++
+
+auto&& x = 10; //int x = 10;
+
+```
+
+* If first init value is L value, this auto type is &&. (there is **'reference collapsing'**. See **INFOS** for more information)
+
+```c++
+
+int y = 10;
+auto&& x = y; //int&& &x = y; --->  int& x = y; //bc of reference collapsing.
+
+```
+
+---
+
+**8)** Compare all of auto types.
+
+```c++
+
+int x = 10;
+
+auto   r1 = x;  // int 
+auto&  r2 = x;  // int&
+auto&& r3 = x;  // int&  (See: reference collapsing)
+auto&& r4 = 10; // int&& (See: reference collapsing)
+
 ```
