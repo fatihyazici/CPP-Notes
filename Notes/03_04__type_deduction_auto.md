@@ -85,7 +85,7 @@ auto& y = "fatih";
 
 ---
 
-**8)** ```auto&& x =expr;``` (Forwarding Reference - Universal Reference)
+**8)** ```auto&& x = expr;``` (Forwarding Reference - Universal Reference)
 
 * If first init value is PR value, this auto type is directly first init type's data type.
 
