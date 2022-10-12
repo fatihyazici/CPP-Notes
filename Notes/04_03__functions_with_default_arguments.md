@@ -26,7 +26,7 @@ void func(int x, int y, ...);
 
 ---
 
-**3)**  We can call a function with less argument from parameters. These functions have **'default argument'**.
+**3)** We can call a function with less argument from parameters. These functions have **'default argument'**.
 
 ```c++
 void func(int x, int y, int z = 10); // z value is a default argument
@@ -46,7 +46,7 @@ int main()
 
 ---
 
-**3)**  function redeclaration
+**3)** function redeclaration
 
 ```c++
 //header.h
@@ -63,7 +63,7 @@ void func(int, int, int=10); // function redclaration
 
 
 
-**4)**  function redeclaration is cumulative
+**4)** function redeclaration is cumulative
 
 ```c++
 //header.h
@@ -80,7 +80,7 @@ void func(int, int = 5, int); // function redclaration
 
 ---
 
-**5)**  maximum munch rule
+**5)** maximum munch rule
 
 ```c++
 int x = 10;
@@ -104,7 +104,7 @@ while(n--> 0) {
 
 ---
 
-**6)**  we can use default argument as a check and control process.
+**6)** we can use default argument as a check and control process.
 
 ```c++
 void process_date(int day, int mon, int year = -1);
@@ -119,8 +119,17 @@ void process_date(int day, int mon, int year = -1){
 
 ---
 
+**7)** we can not replace default argument!
+
+```c++
+void func(int x = 10);
+void func(int x = 20); // It is illegal
+```
+
+---
+
 ```
 start(04-01:30:00)
-end  (04---:--:--)
+end  (04-02:35:20)
 ```
 
