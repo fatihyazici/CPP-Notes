@@ -10,5 +10,6 @@ My C++ Notes
 * references and const semantics
 * references and pointers
 * type deduction
-
+* constexpr
+* functions with default arguments
 
